@@ -2322,11 +2322,8 @@ body.lock {
   }
 
   .footer-items__address {
-    text-align: center;
-  }
-
-  .footer-items__address {
     margin: 20px 0px 15px 0px;
+    text-align: center;
   }
 
   .footer-items__socials {
