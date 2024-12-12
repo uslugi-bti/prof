@@ -273,6 +273,8 @@ h6 {
   width: 120px;
   height: 120px;
   position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .footer__logo img {
@@ -716,7 +718,7 @@ body.lock {
 .gallery-popup__body {
   max-width: 1000px;
   margin: 0 auto;
-  height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2056,6 +2058,11 @@ body.lock {
   .gallery-page .gallery {
     padding: 90px 0px;
   }
+
+  .gallery-page .gallery__body {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
@@ -2273,6 +2280,17 @@ body.lock {
   .new-page .gallery__arrow {
     width: 70px;
   }
+
+  .gallery-page .gallery__body {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery-page .gallery__body {
+    gap: 15px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -2299,8 +2317,22 @@ body.lock {
     grid-row: 4/5;
   }
 
+  .footer-items__link {
+    text-align: center;
+  }
+
+  .footer-items__address {
+    text-align: center;
+  }
+
   .footer-items__address {
     margin: 20px 0px 15px 0px;
+  }
+
+  .footer-items__socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .home .gallery__body {
@@ -2366,6 +2398,9 @@ body.lock {
   .about .departments__item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .about .departments-item__img {
@@ -2380,6 +2415,23 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+
+  .about .departments-item__title h1 {
+    text-align: center;
+  }
+
+  .about .departments-item__name h2 {
+    text-align: center;
+  }
+
+  .about .departments-item__text p {
+    text-align: center;
+  }
+
+  .about .departments-item__phone p,
+  .about .departments-item__phone a {
+    text-align: center;
   }
 
   .news-page .news__pagination {
@@ -2460,6 +2512,13 @@ body.lock {
     bottom: 0;
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery-page .gallery__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
