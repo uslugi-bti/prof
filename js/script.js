@@ -39,7 +39,7 @@ function moveSocials() {
 moveSocials();
 window.addEventListener("resize", moveSocials);
 
-if (document.querySelector(".home .gallery__body")) {
+if (document.querySelector(".home .gallery__body") || document.querySelector(".new-page .gallery__body")) {
     const gallerySwiper = new Swiper(".gallery__body", {
         slidesPerView: 1,
         spaceBetween: 27,
